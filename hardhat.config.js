@@ -11,14 +11,12 @@ module.exports = {
       url: "https://rpc.ankr.com/polygon_mumbai/b428ccc0a41a2deca2cde01e9cd6d896caa4bb06cb0cc0e1f019754a520b8dec",
       accounts: [`0x${process.env.PRIVATE_KEY}`],
     },
-    
-    
+
     sepolia: {
       url: process.env.SEPOLIA_URL,
       accounts: [`0x${process.env.PRIVATE_KEY}`],
     },
   },
-  
 
   etherscan: {
     // Your API key for Etherscan
@@ -29,7 +27,6 @@ module.exports = {
     deployer: { default: 0, deployer1: 0 },
   },
 };
-
 
 task("All_accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
